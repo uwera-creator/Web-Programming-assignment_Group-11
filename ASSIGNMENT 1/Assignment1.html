@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<style>
+    body {
+        font-family: "Times New Roman", serif;
+        font-size: 13px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .form-group label:first-child {
+        width: 150px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 2px;
+        font-size: 13px;
+        height: 20px;
+    }
+
+    textarea {
+        height: 55px;
+    }
+
+    table {
+        margin-left: 150px;
+        font-size: 13px;
+    }
+
+    table input {
+        width: 90px;
+        height: 18px;
+    }
+
+    /* ✅ FIXED ALIGNMENT */
+    .inline {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 6px;
+    }
+
+    .inline input {
+        margin-left: 3px;
+    }
+
+    .buttons {
+        margin-left: 150px;
+    }
+
+    /* Restaurant Section */
+    .restaurant-section {
+        background-color: #a9c7d8;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .restaurant-section h2 {
+        text-align: left;
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    .restaurant-section p {
+        font-size: 15px;
+        margin: 8px 0;
+    }
+
+    .restaurant-section a {
+        margin-right: 12px;
+        color: blue;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>STUDENT REGISTRATION FORM</h2>
+
+<form id="regForm">
+
+<div class="form-group">
+    <label>FIRST NAME</label>
+    <input type="text" required>
+</div>
+
+<div class="form-group">
+    <label>LAST NAME</label>
+    <input type="text" required>
+</div>
+
+<div class="form-group">
+    <label>DATE OF BIRTH</label>
+    <select><option>Day</option></select>
+    <select><option>Month</option></select>
+    <select><option>Year</option></select>
+</div>
+
+<div class="form-group">
+    <label>EMAIL ID</label>
+    <input type="email" required>
+</div>
+
+<div class="form-group">
+    <label>MOBILE NUMBER</label>
+    <input type="tel" maxlength="10" pattern="[0-9]{10}" required>
+</div>
+
+<!-- ✅ GENDER -->
+<div class="form-group">
+    <label>GENDER</label>
+    <label class="inline">Male<input type="radio" name="gender"></label>
+    <label class="inline">Female<input type="radio" name="gender"></label>
+</div>
+
+<div class="form-group">
+    <label>ADDRESS</label>
+    <textarea></textarea>
+</div>
+
+<div class="form-group">
+    <label>CITY</label>
+    <input type="text">
+</div>
+
+<div class="form-group">
+    <label>PIN CODE</label>
+    <input type="text" maxlength="6">
+</div>
+
+<div class="form-group">
+    <label>STATE</label>
+    <input type="text">
+</div>
+
+<div class="form-group">
+    <label>COUNTRY</label>
+    <input type="text" value="India">
+</div>
+
+<!-- ✅ HOBBIES -->
+<div class="form-group">
+    <label>HOBBIES</label>
+    <label class="inline">Drawing<input type="checkbox"></label>
+    <label class="inline">Singing<input type="checkbox"></label>
+    <label class="inline">Dancing<input type="checkbox"></label>
+    <label class="inline">Sketching<input type="checkbox"></label>
+    <label class="inline">
+        Others<input type="checkbox" id="otherCheck">
+        <input type="text" id="otherText" disabled style="width:90px;">
+    </label>
+</div>
+
+<br>
+    <label>QUALIFICATION</label>
+</div>
+
+<table border="0">
+<tr>
+    <th>Sl.No.</th>
+    <th>Examination</th>
+    <th>Board</th>
+    <th>Percentage</th>
+    <th>Year</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Class X</td>
+    <td><input type="text"></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Class XII</td>
+    <td><input type="text"></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Graduation</td>
+    <td><input type="text"></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Masters</td>
+    <td><input type="text"></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+</tr>
+</table>
+
+<br>
+
+<div class="form-group">
+    <label>COURSE</label>
+    <label class="inline">BCA<input type="radio" name="course"></label>
+    <label class="inline">B.Com<input type="radio" name="course"></label>
+    <label class="inline">B.Sc<input type="radio" name="course"></label>
+    <label class="inline">B.A<input type="radio" name="course"></label>
+</div>
+
+<div class="buttons">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</div>
+
+</form>
+
+<hr>
+
+<!-- Restaurant Section -->
+<div class="restaurant-section">
+
+<h2>Welcome to Plantas Restaurant</h2>
+
+<p>Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dream restaurant name.</p>
+
+<a href="">Home</a>
+<a href="">About Us</a>
+<a href="">Gallery</a>
+<a href="">Order Now</a>
+<a href="">Products</a>
+<a href="">Contact us</a>
+
+<p>Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dream restaurant name.</p>
+
+<p>Now that you've got instructions, resources, and lots of inspiration, go forth and choose your dream restaurant name.</p>
+
+</div>
+
+<!-- Others checkbox logic -->
+<script>
+document.getElementById("otherCheck").addEventListener("change", function() {
+    document.getElementById("otherText").disabled = !this.checked;
+});
+</script>
+
+</body>
+</html>
